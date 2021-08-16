@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - 13
+services:
+  - docker
+## What to install
+install:
+  - echo "install path"
+
+## Before Scripts
+before_script:
+  - echo "before scripts"
+
+## Main script
+script:
+  - docker --version
+  - docker build -t simple-node .
+  - docker tag simple-node danielshow/simple-node:latest
+
+## After scripts
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME"
+  - docker push danielshow/simple-node
