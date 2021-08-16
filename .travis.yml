@@ -1,3 +1,4 @@
+
 language: node_js
 node_js:
   - 13
@@ -5,21 +6,19 @@ node_js:
 services:
   - docker
 
-## What to install
+# Pre-testing installs
 install:
-  - echo "install path"
+  - echo "nothing needs to be installed"
 
-## Before Scripts
+# Scripts to be run such as tests
 before_script:
-  - echo "before scripts"
+  - echo "no tests"
 
-## Main script
 script:
-  - docker --version
+  - docker --version # print the version for logging
   - docker build -t simple-node .
   - docker tag simple-node danielshow/simple-node:latest
 
-## After scripts
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker push danielshow/simple-node
