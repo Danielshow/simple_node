@@ -5,7 +5,7 @@ This is a very simple, bare-bones NodeJS project created for you to use with Doc
 * Install dependencies: `npm install`
 * Run server: `node server.js`
 
-# Container Setup
+# Container Setup dd
 * Build image: `docker build .`
 * Run container with image: `docker run {image_id}` where `image_id` can be retrieved by running `docker images` and found under the column `IMAGE ID`
 
