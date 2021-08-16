@@ -1,13 +1,21 @@
 {
   "name": "simple_node",
   "version": "1.0.0",
-  "description": "",
+  "description": "This is a very simple, bare-bones NodeJS project created for you to use with Docker.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Danielshow",
   "license": "ISC",
-  "dependencies": {}
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Danielshow/simple_node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Danielshow/simple_node/issues"
+  },
+  "homepage": "https://github.com/Danielshow/simple_node#readme"
 }
